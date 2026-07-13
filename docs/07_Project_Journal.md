@@ -32,15 +32,77 @@
 
 While analyzing Fiber Optic customers, I realized that simply reducing prices may not always be the best solution. Improving customer support could reduce churn while maintaining revenue, making it a more sustainable strategy.
 
-### Questions
-- If a company can only contact 1,000 customers this month, but your model predicts 10,000 customers are likely to churn, how would you decide which 1,000 customers to prioritize?
-    - i think classifying the 10k customers based on risk or who is more liskely to leave early and categorise them into high,medium,low risk
-    - Instead of treating every predicted churn customer equally, we:
-    Rank customers by their churn probability.
-    Divide them into risk groups.
-    Focus on the highest-risk customers first because the business has limited resources.
 
-- How did you validate the quality of your dataset before preprocessing?
-    - I checked for missing values using isnull(), searched for hidden missing values stored as blank strings, verified duplicate rows and duplicate customer IDs, inspected the number of unique values in each feature, and reviewed categorical values for inconsistencies before making any preprocessing decisions.
-- What was the most important insight from your EDA?
-    - One of the strongest findings was that contract duration had a major impact on churn. Customers on Month-to-Month contracts churned far more frequently than those on One-Year or Two-Year contracts. This suggested that encouraging long-term subscriptions could be an effective business strategy. I later verified the importance of this feature using feature importance and SHAP explanations.
+# Model Training and Hyperparameter Tuning
+
+## Date
+
+(Enter Submission Date)
+
+---
+
+## Tasks Completed
+
+- Completed data preprocessing.
+- Performed feature engineering.
+- Split the dataset into training and testing sets.
+- Trained multiple machine learning models.
+- Compared model performance using various evaluation metrics.
+- Performed hyperparameter tuning using RandomizedSearchCV.
+- Saved trained models and preprocessing scaler.
+- Generated model comparison reports.
+
+---
+
+## Models Implemented
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- XGBoost
+
+---
+
+## Hyperparameter Tuning
+
+Random Forest and XGBoost were tuned using RandomizedSearchCV with 5-fold Cross Validation.
+
+Important techniques used:
+
+- StandardScaler
+- Class Weight Balancing
+- Scale Pos Weight
+- Cross Validation
+
+---
+
+## Performance Summary
+
+### Baseline Best Model
+
+Logistic Regression
+
+Accuracy: **80.62%**
+
+---
+
+### Tuned Best Model
+
+Random Forest
+
+Accuracy: **75.73%**
+
+Recall: **79.68%**
+
+F1 Score: **63.54%**
+
+ROC-AUC: **76.99%**
+
+---
+
+## Key Learnings
+
+- Accuracy alone is not sufficient for imbalanced classification problems.
+- Recall and F1-score are important metrics for churn prediction.
+- Hyperparameter tuning can significantly improve recall even if overall accuracy decreases.
+- Business objectives should guide model selection rather than accuracy alone.

@@ -1,1 +1,11 @@
-# Project dependencies will be added later.
+streamlit
+pandas
+numpy
+scikit-learn
+matplotlib
+plotly
+joblib
+shap
+xgboost
+lightgbm
+imbalanced-learn

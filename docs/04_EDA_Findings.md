@@ -88,3 +88,15 @@ InternetService appears to be an important categorical feature because churn rat
 - Customers without internet service show the lowest churn (~7%).
 - Online Security appears to be one of the strongest indicators of customer retention.
 - This feature is expected to be highly informative for the machine learning model.
+
+### Biggest Business Insights from the Entire EDA
+    Long-term customers are much less likely to churn.
+    Month-to-month contracts have the highest churn rate.
+    Fiber optic customers churn more than DSL customers.
+    Higher monthly charges are associated with higher churn.
+    Customers without Online Security or Tech Support are much more likely to leave.
+    Electronic check users churn the most.
+    Senior citizens are a higher-risk customer segment.
+    Customers with partners or dependents are more loyal.
+    Streaming services have little effect on churn.
+    Gender has almost no impact on churn.

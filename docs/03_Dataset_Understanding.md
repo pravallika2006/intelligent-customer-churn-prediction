@@ -59,13 +59,15 @@ The objective is to predict customers who are likely to churn so that the busine
 ### Business Observation
 Customers with blank `TotalCharges` have `tenure = 0`, indicating they are new customers who have not completed their first billing cycle. This explains why their total billed amount is not yet available.
 
-## Data Cleaning
+### Data Cleaning
 
-### TotalCharges
-- Initially stored as an object due to blank string values.
-- Blank strings were replaced with `NaN`.
-- The column was converted to `float64`.
-- Missing values were filled with `0` because they belonged to customers with `tenure = 0`, meaning they had not completed their first billing cycle.
+- Converted TotalCharges from object to float.
+- Found blank values in TotalCharges.
+- Blank values belonged to customers with tenure = 0.
+- Replaced blank values with 0.
+- No missing values remain.
+
+---
 
 ## Class Distribution
 
@@ -75,11 +77,6 @@ Customers with blank `TotalCharges` have `tenure = 0`, indicating they are new c
 Dataset is moderately imbalanced.
 
 ---
-
-### Result
-- The dataset contains no missing values.
-- All numerical features now have appropriate data types.
-- The dataset is ready for Exploratory Data Analysis (EDA).
 
 ## Key EDA Findings
 
@@ -98,7 +95,4 @@ Dataset is moderately imbalanced.
 
 ## Features to Drop
 
-- customerID
-
-Reason:
-Unique identifier with no predictive value.
+- customerID (Unique identifier with no predictive value.)
